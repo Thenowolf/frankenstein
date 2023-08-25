@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { Constants } from './config/constants';
+import { Config } from './common/config';
 import { UserComponent } from './user/user.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -31,7 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     FormsModule, ReactiveFormsModule
   ],
-  providers: [{provide: "CONF", useValue: Constants}],
+  providers: [{provide: "CONF", useClass: Constants}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

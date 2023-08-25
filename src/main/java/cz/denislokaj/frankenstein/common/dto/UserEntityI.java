@@ -9,4 +9,6 @@ public interface UserEntityI {
 	public void setPassword(String password);
 	public UserRole getRole();
 	public void setRole(UserRole role);
+	public String getEmail();
+	public void setEmail(String email);
 }

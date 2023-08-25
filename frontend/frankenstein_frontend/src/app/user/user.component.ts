@@ -11,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class UserComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight'];
+  displayedColumns: string[] = ['id', 'name', 'email', "role"];
   public users!: User[];
   
   constructor(private userService: UserService){
